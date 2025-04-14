@@ -1,68 +1,51 @@
-'use client';
+export default function ContactInfo() {
+  const contactMethods = [
+    {
+      icon: (
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-8 h-8">
+          <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
+        </svg>
+      ),
+      title: "Call Us",
+      info: "+91 9610960426"
+    },
+    {
+      icon: (
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-8 h-8">
+          <path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
+        </svg>
+      ),
+      title: "Email Us",
+      info: "wasimtech@gmail.com"
+    },
+    {
+      icon: (
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-8 h-8">
+          <path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
+          <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
+        </svg>
+      ),
+      title: "Visit Us",
+      info: "Alwar, Rajasthan, India"
+    }
+  ];
 
-import React from 'react';
-import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa';
-
-const ContactSection = () => {
-    return (
-        <section className=" bg-gray-100">
-            {/* Contact Info */}
-            <div className="flex justify-center gap-6 bg-black py-10 text-white">
-  {/* Call Us */}
-  <div className="bg-teal-900 p-6 rounded-lg text-center w-60">
-    <div className="text-4xl mb-2">📞</div>
-    <p className="font-semibold">Call Us</p>
-    <p>+91 9810800428</p>
-  </div>
-  
-  {/* Email Us */}
-  <div className="bg-teal-900 p-6 rounded-lg text-center w-60">
-    <div className="text-4xl mb-2">📧</div>
-    <p className="font-semibold">Email Us</p>
-    <p>wasimtech@gmail.com</p>
-  </div>
-
-  {/* Visit Us */}
-  <div className="bg-teal-900 p-6 rounded-lg text-center w-60">
-    <div className="text-4xl mb-2">📍</div>
-    <p className="font-semibold">Visit Us</p>
-    <p>Alwar, Rajasthan, India</p>
-  </div>
-</div>
-
-
-            {/* Contact Form + Map */}
-            <div className="bg-black text-white px-10 py-10 flex flex-col lg:flex-row gap-8">
-  {/* Form */}
-  <div className="w-full lg:w-1/2">
-    <h2 className="text-xl font-bold text-teal-400 mb-2">GET IN TOUCH</h2>
-    <p className="text-sm mb-6">Fill out the form below, and we'll get back to you soon.</p>
-    
-    <form className="flex flex-col gap-4">
-      <input type="text" placeholder="Your Name" className="p-3 bg-teal-700 rounded" />
-      <input type="email" placeholder="Your Email" className="p-3 bg-teal-700 rounded" />
-      <input type="text" placeholder="Your Phone" className="p-3 bg-teal-700 rounded" />
-      <textarea placeholder="Your Message" rows={4} className="p-3 bg-teal-700 rounded"></textarea>
-      <button type="submit" className="bg-teal-500 text-black font-semibold w-36 py-2 rounded hover:bg-teal-400 transition-all">Send Message</button>
-    </form>
-  </div>
-
-  {/* Map */}
-  <div className="w-full lg:w-1/2">
-    <iframe
-      title="Google Map"
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3558.271232952066!2d76.61506607499947!3d27.172060048969596!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396db5aa50ab76f5%3A0x7f29936204da976f!2sAlwar%2C%20Rajasthan!5e0!3m2!1sen!2sin!4v1712747078917!5m2!1sen!2sin"
-      width="100%"
-      height="100%"
-      className="min-h-[300px] rounded-lg border-none"
-      allowFullScreen=""
-      loading="lazy"
-    ></iframe>
-  </div>
-</div>
-
-        </section>
-    );
-};
-
-export default ContactSection;
+  return (
+    <section className="py-16 px-5 md:px-10 bg-gray-800 text-white">
+      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+        {contactMethods.map((method, index) => (
+          <div 
+            key={index}
+            className="bg-gray-700 bg-opacity-50 p-8 rounded-xl text-center transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-green-400/20"
+          >
+            <div className="text-green-400 mb-4 mx-auto w-fit">
+              {method.icon}
+            </div>
+            <h3 className="text-xl font-bold mb-2">{method.title}</h3>
+            <p className="text-gray-300">{method.info}</p>
+          </div>
+        ))}
+      </div>
+    </section>
+  );
+}
